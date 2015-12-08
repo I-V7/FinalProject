@@ -87,60 +87,214 @@ class PagesController extends Controller
      */
     public function store(Request $request)
     {
-        $min =Request::input('min');
+
+        $min = Request::input('min');
         $max = Request::input('max');
-        if($min > $max ||  $min < 0 || $max < 0)
-        {
+        if ($min > $max || $min < 0 || $max < 0) {
             return redirect('create');
         }
+        $numCompUsers = DB::table('users')->where('teamStyle1', 'comp')->count();
+        $numSocUsers = DB::table('users')->where('teamStyle1', 'soc')->count();
+        $numIdcUsers = DB::table('users')->where('teamStyle1', 'idc')->count();
+        $halfNumIdcUsers = $numIdcUsers/2;
+        $numCompTeams = ($numCompUsers+ $halfNumIdcUsers)/ $max;
+        $numSocTeams = ($numSocUsers + $halfNumIdcUsers)/ $max;
+
         $users = DB::table('users')->get();
 
         $numUsers = DB::table('users')->count();
-        $numTeams = $numUsers/$min;
-
-        $teams = array();
-        for($i=0; $i<$numTeams; $i++)
+        for($i=0; $i<$numCompTeams;$i++)
         {
-            $teams[$i] = array();
+            DB::table('team')->insert(array('teamName'=>'Competitive Team '.$i, 'teamType'=>'comp'));
         }
-        $remaining = 0;
-        for($i=0; $i<count($users); $i++)
+        for($i=0; $i<$numSocTeams;$i++)
         {
-            if(count($users) -$i < $min)
-            {
-                $remaining = $i;
-                break;
-            }
-            for($j=0; $j<$numTeams; $j++)
-            {
+            DB::table('team')->insert(array('teamName'=>'Social Team '.$i, 'teamType'=>'soc'));
+        }
+        $compTeams = array();
+        $socTeams = array();
 
-                if(count($teams[$j]) < $min )
-                {
-                    array_push($teams[$j], $users[$i]->firstName.$users[$i]->lastName);
+        for ($i = 0; $i < $numCompTeams ; $i++) {
+            $compTeams[$i] = array();
+        }
+        for ($i = 0; $i < $numSocTeams; $i++) {
+            $socTeams[$i] = array();
+        }
 
-                    break;
 
+        $remaining = array();
+        $remaining2 = array();
+        $noMoreRoom = true;
+        for($i=0; $i<count($users); $i++) {
+
+            if ($users[$i]->teamStyle1 == 'comp') {
+
+                for ($j = 0; $j < $numCompTeams; $j++) {
+
+                    if (count($compTeams[$j]) < $max) {
+                        $id = DB::table('team')->where('teamName', 'Competitive Team '.$j)->pluck('id');
+                        DB::table('user_team_xref')->where('userID', $users[$i]->id)->update(array('teamID'=>$id));
+                        array_push($compTeams[$j], $users[$i]->firstName.' '.$users[$i]->lastName);
+                        $noMoreRoom = false;
+                        break;
+                    }
+                }
+                if ($noMoreRoom) {
+                    array_push($remaining, $users[$i]);
+                }
+            } elseif ($users[$i]->teamStyle1 == 'soc') {
+
+                for ($j = 0; $j < $numSocTeams; $j++) {
+
+                    if (count($socTeams[$j]) < $max) {
+                        $id = DB::table('team')->where('teamName', 'Social Team '.$j)->pluck('id');
+                        DB::table('user_team_xref')->where('userID', $users[$i]->id)->update(array('teamID'=>$id));
+                        array_push($socTeams[$j], $users[$i]->firstName.' '.$users[$i]->lastName);
+                        $noMoreRoom = false;
+                        break;
+                    }
+                }
+                if ($noMoreRoom) {
+                    array_push($remaining, $users[$i]);
+                }
+            } elseif ($users[$i]->teamStyle1 == 'idc') {
+
+                for ($j = 0; $j < $numSocTeams; $j++) {
+
+                    if (count($socTeams[$j]) < $max) {
+                        $id = DB::table('team')->where('teamName', 'Social Team '.$j)->pluck('id');
+                        DB::table('user_team_xref')->where('userID', $users[$i]->id)->update(array('teamID'=>$id));
+                        array_push($socTeams[$j], $users[$i]->firstName.' '.$users[$i]->lastName);
+                        $noMoreRoom = false;
+                        break;
+                    }
+                }
+                for ($j = 0; $j < $numCompTeams; $j++) {
+
+                    if (count($compTeams[$j]) < $max) {
+                        $id = DB::table('team')->where('teamName', 'Competitive Team '.$j)->pluck('id');
+                        DB::table('user_team_xref')->where('userID', $users[$i]->id)->update(array('teamID'=>$id));
+                        array_push($compTeams[$j], $users[$i]->firstName.' '.$users[$i]->lastName);
+                        $noMoreRoom = false;
+                        break;
+                    }
+                }
+                if ($noMoreRoom) {
+                    array_push($remaining, $users[$i]);
                 }
             }
-
-
         }
-        for($i = $remaining; $i<count($users); $i++)
-        {
-            for($j=0; $j<$numTeams; $j++)
-            {
 
-                if(count($teams[$j]) < $max )
-                {
-                    array_push($teams[$j], $users[$i]->firstName.$users[$i]->lastName);
 
-                    break;
-
+        for($i=0; $i<count($remaining); $i++) {
+            if ($users[$i]->teamStyle2 == 'comp') {
+                for ($j = 0; $j < $numCompTeams; $j++) {
+                    if (count($compTeams[ $j]) < $max) {
+                        $id = DB::table('team')->where('teamName', 'Competitive Team '.$j)->pluck('id');
+                        DB::table('user_team_xref')->where('userID', $users[$i]->id)->update(array('teamID'=>$id));
+                        array_push($compTeams[$j], $users[$i]->firstName.' '.$users[$i]->lastName);
+                        $noMoreRoom = false;
+                        break;
+                    }
+                }
+                if ($noMoreRoom) {
+                    array_push($remaining2, $users[$i]);
+                }
+            } elseif ($users[$i]->teamStyle2 == 'soc') {
+                for ($j = 0; $j < $numSocTeams; $j++) {
+                    if (count($socTeams[$j]) < $max) {
+                        $id = DB::table('team')->where('teamName', 'Social Team '.$j)->pluck('id');
+                        DB::table('user_team_xref')->where('userID', $users[$i]->id)->update(array('teamID'=>$id));
+                        array_push($socTeams[$j], $users[$i]->firstName.' '.$users[$i]->lastName);
+                        $noMoreRoom = false;
+                        break;
+                    }
+                }
+                if ($noMoreRoom) {
+                    array_push($remaining2, $users[$i]);
+                }
+            } elseif ($users[$i]->teamStyle2 == 'idc') {
+                for ($j = 0; $j < $numCompTeams; $j++) {
+                    if (count($compTeams[ $j]) < $max) {
+                        $id = DB::table('team')->where('teamName', 'Competitive Team '.$j)->pluck('id');
+                        DB::table('user_team_xref')->where('userID', $users[$i]->id)->update(array('teamID'=>$id));
+                        array_push($compTeams[$j], $users[$i]->firstName.' '.$users[$i]->lastName);
+                        $noMoreRoom = false;
+                        break;
+                    }
+                }
+                for ($j = 0; $j < $numSocTeams; $j++) {
+                    if (count($socTeams[$j]) < $max) {
+                        $id = DB::table('team')->where('teamName', 'Social Team '.$j)->pluck('id');
+                        DB::table('user_team_xref')->where('userID', $users[$i]->id)->update(array('teamID'=>$id));
+                        array_push($socTeams[$j], $users[$i]->firstName.' '.$users[$i]->lastName);
+                        $noMoreRoom = false;
+                        break;
+                    }
+                }
+                if ($noMoreRoom) {
+                    array_push($remaining2, $users[$i]);
                 }
             }
         }
+        $remaining3 = array();
+        for($i=0; $i<count($remaining2); $i++) {
+            if ($users[$i]->teamStyle3 == 'comp') {
+                for ($j = 0; $j < $numCompTeams; $j++) {
+                    if (count($compTeams[ $j]) < $max) {
+                        $id = DB::table('team')->where('teamName', 'Competitive Team '.$j)->pluck('id');
+                        DB::table('user_team_xref')->where('userID', $users[$i]->id)->update(array('teamID'=>$id));
+                        array_push($compTeams[$j], $users[$i]->firstName.' '.$users[$i]->lastName);
+                        $noMoreRoom = false;
+                        break;
+                    }
+                }
+                if ($noMoreRoom) {
+                    array_push($remaining3, $users[$i]);
+                }
+            } elseif ($users[$i]->teamStyle3 == 'soc') {
+                for ($j = 0; $j < $numSocTeams; $j++) {
+                    if (count($socTeams[$j]) < $max) {
+                        $id = DB::table('team')->where('teamName', 'Social Team '.$j)->pluck('id');
+                        DB::table('user_team_xref')->where('userID', $users[$i]->id)->update(array('teamID'=>$id));
+                        array_push($socTeams[$j], $users[$i]->firstName.' '.$users[$i]->lastName);
+                        $noMoreRoom = false;
+                        break;
+                    }
+                }
+                if ($noMoreRoom) {
+                    array_push($remaining3, $users[$i]);
+                }
+            } elseif ($users[$i]->teamStyle3 == 'idc') {
+                for ($j = 0; $j < $numCompTeams; $j++) {
+                    if (count($compTeams[ $j]) < $max) {
+                        $id = DB::table('team')->where('teamName', 'Competitive Team '.$j)->pluck('id');
+                        DB::table('user_team_xref')->where('userID', $users[$i]->id)->update(array('teamID'=>$id));
+                        array_push($compTeams[$j], $users[$i]->firstName.' '.$users[$i]->lastName);
+                        $noMoreRoom = false;
+                        break;
+                    }
+                }
+                for ($j = 0; $j < $numSocTeams; $j++) {
+                    if (count($socTeams[$j]) < $max) {
+                        $id = DB::table('team')->where('teamName', 'Social Team '.$j)->pluck('id');
+                        DB::table('user_team_xref')->where('userID', $users[$i]->id)->update(array('teamID'=>$id));
+                        array_push($socTeams[$j], $users[$i]->firstName.' '.$users[$i]->lastName);
+                        $noMoreRoom = false;
+                        break;
+                    }
+                }
+                if ($noMoreRoom) {
+                    array_push($remaining3, $users[$i]);
+                }
 
-        return view('teams', ['teams' => $teams]);
+            }
+        }
+        if(!empty($remaining3))
+            dd($remaining3);
+
+
+        return view('teams', ['compTeams' => $compTeams, 'socTeams' => $socTeams, 'users'=>$users]);
     }
 
     /**

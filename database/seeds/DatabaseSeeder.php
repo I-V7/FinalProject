@@ -27,13 +27,16 @@ class UserTableSeeder extends seeder
        // $myfile = fopen("D:/School/Mines/WebProgramming/finalProject/finalProject/database/seeds/students.csv", "r") or die("Unable to open file!");
         $myfile = fopen("database/seeds/students.csv", "r") or die("Unable to open file!");
         DB::table('users')->delete();
+        DB::table('user_team_xref')->delete();
         $rawLine = "";
+        $id = 0;
         while(($line = fgets($myfile)) !== false){
             $rawLine = rtrim($line);
 
             $info = explode(",", $rawLine);
 
-            App\User::create(['firstName' => $info[0],
+            App\User::create(['id'=> $id,
+                              'firstName' => $info[0],
                               'lastName'=> $info[1],
                               'password' => bcrypt(strval($info[2])),
                               'email' => $info[3],
@@ -46,10 +49,14 @@ class UserTableSeeder extends seeder
                               'teamStyle3' => $info[10],
 
                             ]);
+            DB::table('user_team_xref')->insert(array('userID'=>$id, 'teamID'=>1));
+
+            $id++;
         }
         fclose($myfile);
         $info = explode(",", $rawLine);
-        App\User::create(['firstName' => 'Kyle',
+        App\User::create([  'id'=>$id,
+                            'firstName' => 'Kyle',
                             'lastName'=> 'Dymowski',
                             'password' => bcrypt('12345678'),
                             'email' => 'kdymowsk@mines.edu',
@@ -60,6 +67,7 @@ class UserTableSeeder extends seeder
                             'teamStyle1' => $info[8],
                             'teamStyle2' => $info[9],
                             'teamStyle3' => $info[10]]);
+        DB::table('user_team_xref')->insert(array('userID'=>$id, 'teamID'=>1));
 
     }
 }

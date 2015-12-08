@@ -12,11 +12,13 @@ class CreateUserLanguageXref extends Migration
      */
     public function up()
     {
-        /*Schema::create('userLangXref', function (Blueprint $table) {
+        Schema::create('user_lang_xref', function (Blueprint $table) {
+            $table->integer('userID');
+            $table->integer('langID');
             $table->foreign('userID')->references('id')->on('users');
             $table->foreign('langID')->references('id')->on('languages');
 
-        });*/
+        });
     }
 
     /**
@@ -26,6 +28,6 @@ class CreateUserLanguageXref extends Migration
      */
     public function down()
     {
-        Schema::drop('userLangXref');
+        Schema::drop('user_lang_xref');
     }
 }
