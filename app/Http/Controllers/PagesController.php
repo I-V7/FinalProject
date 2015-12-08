@@ -41,6 +41,11 @@ class PagesController extends Controller
         //redirect to info
         return redirect ('auth.info');
     }
+    public function userProfile()
+    {
+        $id = \Auth::user()->id;
+        return view('profile');
+    }
     public function createteams()
     {
         $id = \Auth::user()->id;

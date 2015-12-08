@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 Route::get('/', 'PagesController@welcome');
 Route::get('info', 'PagesController@info');
+Route::get('profile','PagesController@userProfile');
 Route::get('home', 'PagesController@home');
 Route::get('create', 'PagesController@createTeams');
 Route::get('teams', 'PagesController@store');
