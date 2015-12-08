@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         $this->call(UserTableSeeder::class);
-
+        $this->call(CourseTableSeeder::class);
         Model::reguard();
     }
 }
@@ -70,4 +70,19 @@ class UserTableSeeder extends seeder
         DB::table('user_team_xref')->insert(array('userID'=>$id, 'teamID'=>1));
 
     }
+}
+class CourseTableSeeder extends seeder
+{
+    public function run()
+    {
+        $myCourseFile = fopen("database/seeds/courses.csv", "r") or die("Unable to open file!");
+        DB::table('courses')->delete();
+        $rawLine = "";
+        while(($line = fgets($myCourseFile)) !== false){
+            $rawLine = rtrim($line);
+            App\courses::create(['courseID' => $rawLine]);
+        }
+        fclose($myCourseFile);
+    }
+
 }
