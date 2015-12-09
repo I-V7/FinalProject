@@ -2,16 +2,197 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe4bf8a1-0533-45e3-a6b5-b03ee6460985" name="Default" comment="added form builder and have first set of info, this will require more validation so going to make it simpler">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/teams.blade.php" afterPath="$PROJECT_DIR$/resources/views/teams.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/database.sqlite" afterPath="$PROJECT_DIR$/storage/database.sqlite" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.php" afterPath="$PROJECT_DIR$/config/database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/.travis.yml" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/CacheProvider.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/CacheProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/FileCache.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/FileCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MongoDBCache.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MongoDBCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/RedisCache.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/RedisCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/Version.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/Version.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/phpunit.xml.dist" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/ApcCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/ApcCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/ArrayCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/ArrayCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/CacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/CacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/ChainCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/ChainCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/CouchbaseCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/CouchbaseCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/FilesystemCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/FilesystemCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/MemcacheCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/MemcacheCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/MemcachedCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/MemcachedCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/MongoDBCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/MongoDBCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/PhpFileCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/PhpFileCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/SQLite3CacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/SQLite3CacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/common/composer.json" afterPath="$PROJECT_DIR$/vendor/doctrine/common/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/AbstractManagerRegistry.php" afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/AbstractManagerRegistry.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/SymfonyFileLocator.php" afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/SymfonyFileLocator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Proxy/ProxyGenerator.php" afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Proxy/ProxyGenerator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Version.php" afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Version.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/common/tests/Doctrine/Tests/Common/Persistence/ManagerRegistryTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/common/tests/Doctrine/Tests/Common/Persistence/ManagerRegistryTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/common/tests/Doctrine/Tests/Common/Persistence/Mapping/DefaultFileLocatorTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/common/tests/Doctrine/Tests/Common/Persistence/Mapping/DefaultFileLocatorTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/common/tests/Doctrine/Tests/Common/Persistence/Mapping/SymfonyFileLocatorTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/common/tests/Doctrine/Tests/Common/Persistence/Mapping/SymfonyFileLocatorTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure/composer.json" afterPath="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure/src/Analyzer/AstAnalyzer.php" afterPath="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure/src/Analyzer/AstAnalyzer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure/src/Analyzer/ClosureAnalyzer.php" afterPath="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure/src/Analyzer/ClosureAnalyzer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure/src/Analyzer/TokenAnalyzer.php" afterPath="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure/src/Analyzer/TokenAnalyzer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure/src/Analyzer/Visitor/ClosureLocatorVisitor.php" afterPath="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure/src/Analyzer/Visitor/ClosureLocatorVisitor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure/src/Analyzer/Visitor/MagicConstantVisitor.php" afterPath="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure/src/Analyzer/Visitor/MagicConstantVisitor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure/src/SerializableClosure.php" afterPath="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure/src/SerializableClosure.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure/src/Serializer.php" afterPath="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure/src/Serializer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/.travis.yml" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/CHANGELOG.md" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/README.md" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/composer.json" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/doc/0_Introduction.markdown" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/doc/0_Introduction.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/doc/2_Usage_of_basic_components.markdown" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/doc/2_Usage_of_basic_components.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/doc/3_Other_node_tree_representations.markdown" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/doc/3_Other_node_tree_representations.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/doc/4_Code_generation.markdown" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/doc/4_Code_generation.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/doc/component/Error.markdown" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/doc/component/Error.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/doc/component/Lexer.markdown" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/doc/component/Lexer.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/grammar/README.md" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/grammar/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/grammar/analyze.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/grammar/analyze.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Autoloader.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Autoloader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Lexer.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Lexer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Lexer/Emulative.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Lexer/Emulative.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Arg.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Arg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Const_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Const_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/ArrayDimFetch.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/ArrayDimFetch.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/ArrayItem.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/ArrayItem.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Array_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Array_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Assign.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Assign.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/AssignOp.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/AssignOp.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/AssignRef.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/AssignRef.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/BinaryOp.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/BinaryOp.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/BitwiseNot.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/BitwiseNot.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/BooleanNot.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/BooleanNot.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Cast.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Cast.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/ClassConstFetch.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/ClassConstFetch.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Clone_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Clone_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Closure.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Closure.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/ClosureUse.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/ClosureUse.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/ConstFetch.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/ConstFetch.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Empty_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Empty_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/ErrorSuppress.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/ErrorSuppress.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Eval_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Eval_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Exit_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Exit_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/FuncCall.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/FuncCall.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Include_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Include_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Instanceof_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Instanceof_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Isset_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Isset_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/List_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/List_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/MethodCall.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/MethodCall.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/New_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/New_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/PostDec.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/PostDec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/PostInc.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/PostInc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/PreDec.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/PreDec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/PreInc.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/PreInc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Print_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Print_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/PropertyFetch.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/PropertyFetch.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/ShellExec.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/ShellExec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/StaticCall.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/StaticCall.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/StaticPropertyFetch.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/StaticPropertyFetch.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Ternary.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Ternary.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/UnaryMinus.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/UnaryMinus.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/UnaryPlus.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/UnaryPlus.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Variable.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Variable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/YieldFrom.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/YieldFrom.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Yield_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Yield_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Name.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Name.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Param.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Param.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Scalar/DNumber.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Scalar/DNumber.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Scalar/Encapsed.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Scalar/Encapsed.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Scalar/LNumber.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Scalar/LNumber.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Scalar/MagicConst.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Scalar/MagicConst.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Scalar/String_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Scalar/String_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Break_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Break_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Case_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Case_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Catch_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Catch_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/ClassConst.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/ClassConst.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/ClassMethod.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/ClassMethod.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Class_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Class_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Const_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Const_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Continue_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Continue_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/DeclareDeclare.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/DeclareDeclare.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Declare_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Declare_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Do_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Do_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Echo_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Echo_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/ElseIf_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/ElseIf_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Else_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Else_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/For_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/For_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Foreach_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Foreach_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Function_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Function_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Global_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Global_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Goto_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Goto_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/HaltCompiler.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/HaltCompiler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/If_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/If_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/InlineHTML.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/InlineHTML.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Interface_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Interface_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Label.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Label.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Namespace_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Namespace_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Property.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Property.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/PropertyProperty.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/PropertyProperty.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Return_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Return_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/StaticVar.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/StaticVar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Static_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Static_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Switch_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Switch_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Throw_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Throw_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/TraitUse.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/TraitUse.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/TraitUseAdaptation/Alias.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/TraitUseAdaptation/Alias.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/TraitUseAdaptation/Precedence.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/TraitUseAdaptation/Precedence.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Trait_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Trait_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/TryCatch.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/TryCatch.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Unset_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Unset_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/UseUse.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/UseUse.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Use_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Use_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/While_.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/While_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/NodeAbstract.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/NodeAbstract.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/NodeVisitor/NameResolver.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/NodeVisitor/NameResolver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Parser.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Parser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/PrettyPrinter/Standard.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/PrettyPrinter/Standard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/PrettyPrinterAbstract.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/PrettyPrinterAbstract.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/phpunit.xml.dist" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/AutoloaderTest.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/AutoloaderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/CodeTestAbstract.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/CodeTestAbstract.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/Lexer/EmulativeTest.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/Lexer/EmulativeTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/LexerTest.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/LexerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/Node/NameTest.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/Node/NameTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/NodeAbstractTest.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/NodeAbstractTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/NodeTraverserTest.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/NodeTraverserTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/NodeVisitor/NameResolverTest.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/NodeVisitor/NameResolverTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/ParserTest.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/ParserTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/PrettyPrinterTest.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/PrettyPrinterTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/Serializer/XMLTest.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/PhpParser/Serializer/XMLTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/code/parser/expr/fetchAndCall/objectAccess.test" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/code/parser/expr/fetchAndCall/objectAccess.test" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/code/parser/expr/fetchAndCall/staticCall.test" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/code/parser/expr/fetchAndCall/staticCall.test" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/code/parser/expr/shellExec.test" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/code/parser/expr/shellExec.test" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/code/parser/expr/variable.test" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/code/parser/expr/variable.test" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/code/parser/scalar/docString.test" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/code/parser/scalar/docString.test" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/code/parser/scalar/docStringNewlines.test" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/code/parser/scalar/docStringNewlines.test" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/code/parser/scalar/encapsedString.test" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/code/parser/scalar/encapsedString.test" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/code/parser/stmt/loop/for.test" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/code/parser/stmt/loop/for.test" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test/code/parser/stmt/namespace/alias.test" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test/code/parser/stmt/namespace/alias.test" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test_old/run.php" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test_old/run.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/sebastian/diff/composer.json" afterPath="$PROJECT_DIR$/vendor/sebastian/diff/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/sebastian/diff/src/Chunk.php" afterPath="$PROJECT_DIR$/vendor/sebastian/diff/src/Chunk.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/sebastian/diff/src/Diff.php" afterPath="$PROJECT_DIR$/vendor/sebastian/diff/src/Diff.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/sebastian/diff/src/Differ.php" afterPath="$PROJECT_DIR$/vendor/sebastian/diff/src/Differ.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/sebastian/diff/src/LCS/LongestCommonSubsequence.php" afterPath="$PROJECT_DIR$/vendor/sebastian/diff/src/LCS/LongestCommonSubsequence.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/sebastian/diff/src/LCS/MemoryEfficientLongestCommonSubsequenceImplementation.php" afterPath="$PROJECT_DIR$/vendor/sebastian/diff/src/LCS/MemoryEfficientLongestCommonSubsequenceImplementation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/sebastian/diff/src/LCS/TimeEfficientLongestCommonSubsequenceImplementation.php" afterPath="$PROJECT_DIR$/vendor/sebastian/diff/src/LCS/TimeEfficientLongestCommonSubsequenceImplementation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/sebastian/diff/src/Line.php" afterPath="$PROJECT_DIR$/vendor/sebastian/diff/src/Line.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/sebastian/diff/src/Parser.php" afterPath="$PROJECT_DIR$/vendor/sebastian/diff/src/Parser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/sebastian/diff/tests/DifferTest.php" afterPath="$PROJECT_DIR$/vendor/sebastian/diff/tests/DifferTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/sebastian/diff/tests/LCS/TimeEfficientImplementationTest.php" afterPath="$PROJECT_DIR$/vendor/sebastian/diff/tests/LCS/TimeEfficientImplementationTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/sebastian/recursion-context/src/Context.php" afterPath="$PROJECT_DIR$/vendor/sebastian/recursion-context/src/Context.php" />
     </list>
     <ignored path="finalProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,51 +221,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="teams.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/teams.blade.php">
+      <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-26.666666">
-              <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+            <state vertical-scroll-proportion="-9.5">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2015_12_01_084542_create_courses.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2015_12_01_084542_create_courses.php">
+      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.333334">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state vertical-scroll-proportion="-10.807693">
+              <caret line="67" column="11" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseSeeder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.185184">
-              <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
+            <state vertical-scroll-proportion="-2.6153846">
+              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/profile.blade.php">
+      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.666666">
-              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="info.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/info.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-81.51852">
-              <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.37859008">
+              <caret line="53" column="84" selection-start-line="53" selection-start-column="84" selection-end-line="53" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -93,50 +264,8 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0">
-              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="courses.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/courses.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.3333335">
-              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014_10_12_000000_create_users_table.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30751708">
-              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="37" />
-              <folding>
-                <element signature="e#7#48#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2015_12_01_085045_create_user_course_xref.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2015_12_01_085045_create_user_course_xref.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.333334">
-              <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.0">
-              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            <state vertical-scroll-proportion="-7.8461537">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -155,7 +284,6 @@
         <option value="$PROJECT_DIR$/.env.example" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/info.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/info.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Request.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
@@ -168,9 +296,7 @@
         <option value="$PROJECT_DIR$/resources/views/auth/set_teams.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/create_teams.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_12_03_121414_create_team.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/app/team.php" />
         <option value="$PROJECT_DIR$/app/courses.php" />
         <option value="$PROJECT_DIR$/app/languages.php" />
@@ -180,11 +306,8 @@
         <option value="$PROJECT_DIR$/resources/views/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/profile.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/config/database.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_12_01_084530_create_languages.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_12_01_084542_create_courses.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_12_01_085736_create_team.php" />
@@ -195,6 +318,12 @@
         <option value="$PROJECT_DIR$/resources/views/teams.blade.php" />
         <option value="$PROJECT_DIR$/database/seeds/courses.cvs" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/config/database.php" />
+        <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
       </list>
     </option>
   </component>
@@ -213,9 +342,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP for XAMPP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="541" />
-    <option name="width" value="1380" />
-    <option name="height" value="1055" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="547" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -243,6 +372,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -407,9 +537,74 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="finalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FinalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="finalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FinalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="finalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FinalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Auth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -475,11 +670,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="541" y="0" width="1380" height="1055" extended-state="4" />
+    <frame x="-7" y="0" width="974" height="547" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23198198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23173277" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3340471" sideWeight="0.50213444" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -524,6 +719,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/resources/views/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18947369">
@@ -594,13 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.076923">
-          <caret line="74" column="9" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/auth.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -654,20 +850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-22.23077">
           <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.961538">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -755,28 +937,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5834242">
-          <caret line="47" column="105" selection-start-line="47" selection-start-column="105" selection-end-line="47" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2015_12_01_085726_create_user_team_xref.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58504874">
           <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-          <folding>
-            <element signature="e#7#48#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6207289">
-          <caret line="53" column="75" selection-start-line="53" selection-start-column="75" selection-end-line="53" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -784,9 +948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.020501139">
           <caret line="149" column="74" selection-start-line="149" selection-start-column="74" selection-end-line="149" selection-end-column="74" />
-          <folding>
-            <element signature="e#41#63#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -794,7 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.0">
           <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -802,15 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/teams.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.666666">
-          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -818,13 +969,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18451025">
           <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding />
         </state>
@@ -832,67 +982,107 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2015_12_01_085045_create_user_course_xref.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.333334">
+        <state vertical-scroll-proportion="0.0">
           <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/courses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.3333335">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.185184">
-          <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/info.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-81.51852">
+        <state vertical-scroll-proportion="0.0">
           <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.666666">
-          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_12_01_084542_create_courses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.333334">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30751708">
+        <state vertical-scroll-proportion="0.308094">
           <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="37" />
           <folding>
-            <element signature="e#7#48#0#PHP" expanded="true" />
+            <element signature="e#7#48#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/courses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3550914">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66579634">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5117493">
+          <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_12_01_084542_create_courses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73368144">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/teams.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.044386424">
+          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.5">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.807693">
+          <caret line="67" column="11" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37859008">
+          <caret line="53" column="84" selection-start-line="53" selection-start-column="84" selection-end-line="53" selection-end-column="84" />
+          <folding />
         </state>
       </provider>
     </entry>

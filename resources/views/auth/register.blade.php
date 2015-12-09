@@ -21,10 +21,18 @@
 					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/register') }}">
 						{!! csrf_field() !!}
 
-						<div class="form-group">
-							<label class="col-md-4 control-label">Name</label>
-							<div class="col-md-6">
-								<input type="text" class="form-control" name="name" value="{{ old('name') }}">
+						<div class="row">
+							<div class="col-xs-6">
+								<div class="form-group">
+									<label class="col-md-4 control-label">First</label>
+								</div>
+								<input type="text" class="form-control" name="firstName" value="{{ old('firstName') }}">
+							</div>
+							<div class="col-xs-6">
+								<div class="form-group">
+									<label class="col-md-4 control-label">Last</label>
+								</div>
+								<input type="text" class="form-control" name="lastName" value="{{ old('lastName') }}">
 							</div>
 						</div>
 
