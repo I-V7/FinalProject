@@ -25,9 +25,8 @@
         </div>
         <h3>Classes Taken:</h3>
         <div class="col-md-10">
-            {{--@foreach($classes as $class)
-                <h4>{{$class}}</h4>
-            @endforeach--}}
+            {{$list = DB::table('user_course_xref')->where('userID', auth()->user()->id)->pluck('courseID') }}
+            {{$list}}
         </div>
         <h3>Team:</h3>
 

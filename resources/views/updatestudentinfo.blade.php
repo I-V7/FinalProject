@@ -10,7 +10,7 @@
             <div class="form-group">
                 {!!Form::label('firstName', 'First:')!!}
             </div>
-        {!!Form::text('fisrtName', auth()->user()->firstName, ['class' => 'form-control', 'placeholder' => 'Student Miner'])!!}
+        {!!Form::text('firstName', auth()->user()->firstName, ['class' => 'form-control', 'placeholder' => 'Student Miner'])!!}
         </div>
         <div class="col-xs-6">
             <div class="form-group">
@@ -40,15 +40,24 @@
     <h1>Classes Taken</h1>
 
     @for($j=1; $j<count($courses);$j++)
-        {!! $courses[$j] !!}
         {!! Form::radio($courses[$j], $courses[$j])!!}{!! $courses[$j]!!}
     @endfor
 
-    <h1>Classes Taken</h1>
-    {!! Form::radio('style', 'Competitive')!!}Competitive
-    {!! Form::radio('style', 'Social')!!}Social
-    {!! Form::radio('style', 'Either')!!}Either
-    <br><br>
+    <h1>1st Preference Team Style</h1>
+    {!! Form::radio('teamStyle1', 'Competitive')!!}Competitive
+    {!! Form::radio('teamStyle1', 'Social')!!}Social
+    {!! Form::radio('teamStyle1', 'Either')!!}Either
+    <br>
+    <h1>2nd Preference Team Style</h1>
+    {!! Form::radio('teamStyle2', 'Competitive')!!}Competitive
+    {!! Form::radio('teamStyle2', 'Social')!!}Social
+    {!! Form::radio('teamStyle2', 'Either')!!}Either
+    <br>
+    <h1>3rd Preference Team Style</h1>
+    {!! Form::radio('teamStyle3', 'Competitive')!!}Competitive
+    {!! Form::radio('teamStyle3', 'Social')!!}Social
+    {!! Form::radio('teamStyle3', 'Either')!!}Either
+    <br>
 
         <!--Form submit-->
         {!!Form::submit('update info', ['class' => 'btn btn-primary form-control'])!!}
