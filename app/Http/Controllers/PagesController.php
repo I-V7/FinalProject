@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\languages;
 use DB;
 use Request;
 
@@ -34,16 +35,21 @@ class PagesController extends Controller
         //get data for table
         $id=\Auth::user()->id;
         $info = \App\User::findorfail($id);
-
-
-
         //redirect to info
-        return view ('updatestudentinfo');
+        $courses = DB::table('courses')->lists('courseID');
+        return view ('updatestudentinfo', compact('courses'));
     }
     public function userProfile()
     {
         $id = \Auth::user()->id;
+
         return view('profile');
+    }
+    public function updateInfo2(){
+        $input = Request::all();
+        $id = auth()->user()->id;
+
+        return $input;
     }
 
 
