@@ -58,8 +58,10 @@
     @endfor
 
     @for($i=0; $i<count($socTeams); $i++)
+
         @unless(empty($socTeams))
         <h2 class="soc">Social Team{{$i}}</h2>
+
         @for($j=0; $j<count($socTeams[$i]); $j++)
             <p>{{$socTeams[$i][$j]}}</p>
         @endfor
@@ -69,5 +71,6 @@
 
 
     <div class="btn" onclick="window.location='{{ action('TeamController@edit') }}'">Edit teams</div>
+
 
 @stop

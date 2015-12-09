@@ -24,8 +24,10 @@ Route::get('auth/login', 'PagesController@auth');
 Route::get('editteams', 'TeamController@edit');
 Route::get('viewteams', 'TeamController@show');
 Route::get('updatestudentinfo', 'PagesController@updateInfo');
+
 Route::get('updateteams','TeamController@update');
 Route::get('update2', 'PagesController@updateInfo2');
+
 Route::controllers([
    'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',

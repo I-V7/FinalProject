@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\languages;
 use DB;
+use Mockery\CountValidator\Exception;
 use Request;
 
 class PagesController extends Controller
@@ -34,11 +36,9 @@ class PagesController extends Controller
         //get data for table
         $id=\Auth::user()->id;
         $info = \App\User::findorfail($id);
-
-
-
         //redirect to info
-        return view ('updatestudentinfo');
+        $courses = DB::table('courses')->lists('courseID');
+        return view ('updatestudentinfo', compact('courses'));
     }
     public function updateInfo2()
     {
@@ -48,7 +48,44 @@ class PagesController extends Controller
     public function userProfile()
     {
         $id = \Auth::user()->id;
+
         return view('profile');
+    }
+    public function updateInfo2(){
+        $input = Request::all();
+        $id = auth()->user()->id;
+        //get user id
+
+        //get user tuples
+        $userData = \App\User::find($id);
+        //get updated user data from form
+        $userData->firstName = Request::input('firstName');
+        $userData->lastName = Request::input('lastName');
+        $userData->language1 = Request::input('language1');
+        $userData->language2 = Request::input('language2');
+        $userData->language3 = Request::input('language3');
+        $userData->teamStyle1 = Request::input('teamStyle1');
+        $userData->teamStyle2 = Request::input('teamStyle2');
+        $userData->teamStyle3 = Request::input('teamStyle3');
+//update user data
+        $userData->save();
+        foreach($input as $in){
+            $cid = DB::table('courses')->where('courseID', $in)->value('id');
+
+            if ($cid && $id) {
+                DB::table('user_course_xref')->insert(['userID' => $id, 'courseID' => $cid]);
+            }
+        }
+
+        /*for($j=1; $j<count($input) - 1;$j++) {
+            $cid = DB::table('courses')->where('courseID', $input[$j])->value('id');
+            DB::table('user_course_xref')->insert([['userID' => $id],['courseID' => $cid]]);
+        }*/
+
+
+        return redirect('profile');
+
+        //return redirect('profile');
     }
 
 

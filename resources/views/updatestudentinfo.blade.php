@@ -5,40 +5,60 @@
     <!--let laravel use the form builder-->
     {!!Form::model(null, ['url' => ['updatestudentinfo'], 'class' => 'form-horizontal', 'id' => 'infoForm'])!!}
         <!--Creating an input field for name using bootstrap-->
-        {!!Form::label('name', 'Name:')!!}
-        {!!Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Student Miner'])!!}
-        <br>
-        <!--Creating an input field for language preference using bootstrap-->
-        <div class="dropdown" id="languagesDropdown">
-            {!! Form::button('Preferred Language <span class="caret"></span>', ['class' => 'btn btn-primary dropdown-toggle', 'data-toggle' => 'dropdown']) !!}
-            <ul class="dropdown-menu" id="languageDropdown">
-                <li class="disabled"><a href="#">top is most favored</a></li>
-                <li><a href="#">C/C++</a></li>
-                <li><a href="#">Java</a></li>
-                <li><a href="#">Python</a></li>
-            </ul>
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="form-group">
+                {!!Form::label('firstName', 'First:')!!}
+            </div>
+        {!!Form::text('firstName', auth()->user()->firstName, ['class' => 'form-control', 'placeholder' => 'Student Miner'])!!}
         </div>
-        <br>
-        <!--Creating an input field and add button for classes using bootstrap-->
-        <div class="dropdown" id="classesDropdown">
-            {!! Form::button('Classes Taken <span class="caret"></span>', ['class' => 'btn btn-primary dropdown-toggle', 'data-toggle' => 'dropdown']) !!}
-            <ul class="dropdown-menu" id="classDropdown">
-                <li><a href="#">CSCI261</a></li>
-                <li><a href="#">CSCI262</a></li>
-                <li><a href="#">CSCI306</a></li>
-            </ul>
+        <div class="col-xs-6">
+            <div class="form-group">
+                {!!Form::label('lastName', 'Last:')!!}
+            </div>
+        {!!Form::text('lastName', auth()->user()->lastName, ['class' => 'form-control', 'placeholder' => 'Student Miner'])!!}
         </div>
-        <br>
-    <!--Creating a drop down box for team style using bootstrap-->
-        <div class="dropdown" id="teamStyleDropdown">
-            {!! Form::button('Team Style <span class="caret"></span>', ['class' => 'btn btn-primary dropdown-toggle', 'data-toggle' => 'dropdown']) !!}
-            <ul class="dropdown-menu" id="styleDropdown">
-                <li><a href="#">Social</a></li>
-                <li><a href="#">Competitive</a></li>
-                <li><a href="#">IDGAF</a></li>
-            </ul>
-        </div>
-        <br>
+
+
+    </div>
+    {{--{{$langs = ['C/C++', 'Java', 'Python']}}
+    {{$courses = ['CSCI306', 'CSCI262', 'CSCI261']}}
+    {{$style = ['Social', 'Competitive', 'either']}}--}}
+   {{--{!! Form::select('members[]', ['C/C++', 'Java', 'Python'], null, array('multiple' => true, 'class' 'custom-scroll')) !!}--}}
+    <h1>Favorite Language</h1>
+    {!! Form::radio('language1', 'Python')!!}Python
+    {!! Form::radio('language1', 'Java')!!}Java
+    {!! Form::radio('language1', 'C++')!!}C++<br>
+    <h1>Second Favorite Language</h1>
+    {!! Form::radio('language2', 'Python')!!}Python
+    {!! Form::radio('language2', 'Java')!!}Java
+    {!! Form::radio('language2', 'C++')!!}C++<br>
+    <h1>Third Favorite Language</h1>
+    {!! Form::radio('language3', 'Python')!!}Python
+    {!! Form::radio('language3', 'Java')!!}Java
+    {!! Form::radio('language3', 'C++')!!}C++<br>
+    <h1>Classes Taken</h1>
+
+    @for($j=1; $j<count($courses);$j++)
+        {!! Form::radio($courses[$j], $courses[$j])!!}{!! $courses[$j]!!}
+    @endfor
+
+    <h1>1st Preference Team Style</h1>
+    {!! Form::radio('teamStyle1', 'Competitive')!!}Competitive
+    {!! Form::radio('teamStyle1', 'Social')!!}Social
+    {!! Form::radio('teamStyle1', 'Either')!!}Either
+    <br>
+    <h1>2nd Preference Team Style</h1>
+    {!! Form::radio('teamStyle2', 'Competitive')!!}Competitive
+    {!! Form::radio('teamStyle2', 'Social')!!}Social
+    {!! Form::radio('teamStyle2', 'Either')!!}Either
+    <br>
+    <h1>3rd Preference Team Style</h1>
+    {!! Form::radio('teamStyle3', 'Competitive')!!}Competitive
+    {!! Form::radio('teamStyle3', 'Social')!!}Social
+    {!! Form::radio('teamStyle3', 'Either')!!}Either
+    <br>
+
         <!--Form submit-->
         {!!Form::submit('update info', ['class' => 'btn btn-primary form-control'])!!}
     {!!Form::close()!!}
