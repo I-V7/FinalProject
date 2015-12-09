@@ -32,4 +32,8 @@
         <h3>Team:</h3>
 
     </div>
+    <button type="button" onclick="window.location='{{ action('PagesController@updateInfo') }}'">Edit info</button>
+    @if(auth()->user()->userType == 'admin')
+        <button type="button" onclick="window.location='{{ action('TeamController@edit') }}'">Edit teams</button>
+    @endif
 @stop

@@ -18,10 +18,13 @@ Route::get('/', 'PagesController@welcome');
 Route::get('info', 'PagesController@info');
 Route::get('profile','PagesController@userProfile');
 Route::get('home', 'PagesController@home');
-Route::get('create', 'PagesController@createTeams');
-Route::get('teams', 'PagesController@store');
+Route::get('create', 'TeamController@createTeams');
+Route::get('teams', 'TeamController@store');
 Route::get('auth/login', 'PagesController@auth');
-
+Route::get('editteams', 'TeamController@edit');
+Route::get('viewteams', 'TeamController@show');
+Route::get('updatestudentinfo', 'PagesController@updateInfo');
+Route::post('updateteams','TeamController@update');
 Route::controllers([
    'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',
