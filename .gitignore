@@ -2,3 +2,6 @@
 .env.*.php
 .env.php
 .env
+vendor/sebastian/diff/.php_cs
+vendor/symfony/polyfill-php56/
+vendor/symfony/polyfill-util/

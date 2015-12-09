@@ -13,9 +13,4 @@ class ApcCacheTest extends CacheTest
     {
         return new ApcCache();
     }
-
-    public function testLifetime()
-    {
-        $this->markTestSkipped('The APC cache TTL is not working in a single process/request. See https://bugs.php.net/bug.php?id=58084');
-    }
 }

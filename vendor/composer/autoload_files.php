@@ -8,8 +8,8 @@ $baseDir = dirname($vendorDir);
 return array(
     $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
     $vendorDir . '/symfony/var-dumper/Resources/functions/dump.php',
+    $vendorDir . '/nikic/php-parser/lib/bootstrap.php',
     $vendorDir . '/swiftmailer/swiftmailer/lib/swift_required.php',
-    $vendorDir . '/symfony/polyfill-php56/bootstrap.php',
     $vendorDir . '/psy/psysh/src/Psy/functions.php',
     $vendorDir . '/danielstjules/stringy/src/Create.php',
     $vendorDir . '/paragonie/random_compat/lib/random.php',

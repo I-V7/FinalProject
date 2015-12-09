@@ -374,8 +374,10 @@ class TeamController extends Controller
      */
     public function update(Request $request)
     {
-        
-        return 'tho';
+        /*******************************************************************************
+            this is where you update the teams tables
+        ***************************************************************************/
+
     }
 
     /**

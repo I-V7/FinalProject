@@ -16,7 +16,7 @@ class User extends Model implements AuthenticatableContract,
 {
     use Authenticatable, Authorizable, CanResetPassword;
     public $timestamps = false;
-    protected $fillable = ['firstname','lastname ','type', 'language1','language2','language2','teamStyle1','teamStyle2 ','teamStyle3','password', 'email'];
+    protected $fillable = ['firstName','lastName','type', 'language1','language2','language2','teamStyle1','teamStyle2 ','teamStyle3','password', 'email'];
 
 
 }
