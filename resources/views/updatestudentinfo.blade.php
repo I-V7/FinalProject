@@ -3,7 +3,7 @@
 @section('content')
     <h2>My Info</h2>
     <!--let laravel use the form builder-->
-    {!!Form::model(null, ['url' => ['/'], 'class' => 'form-horizontal', 'id' => 'infoForm'])!!}
+    {!!Form::model(null, ['url' => ['updatestudentinfo'], 'class' => 'form-horizontal', 'id' => 'infoForm'])!!}
         <!--Creating an input field for name using bootstrap-->
         {!!Form::label('name', 'Name:')!!}
         {!!Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Student Miner'])!!}

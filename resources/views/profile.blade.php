@@ -36,4 +36,7 @@
     @if(auth()->user()->userType == 'admin')
         <button type="button" onclick="window.location='{{ action('TeamController@edit') }}'">Edit teams</button>
     @endif
+    <button type="button" onclick="window.location='{{ action('TeamController@show') }}'">View teams</button>
+    <button type="button" onclick="window.location='{{ url('create') }}'">Create teams</button>
+
 @stop

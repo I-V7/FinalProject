@@ -40,6 +40,11 @@ class PagesController extends Controller
         //redirect to info
         return view ('updatestudentinfo');
     }
+    public function updateInfo2()
+    {
+        dd(Request::all());
+        return redirect('updatestudentinfo');
+    }
     public function userProfile()
     {
         $id = \Auth::user()->id;

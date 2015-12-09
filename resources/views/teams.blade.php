@@ -46,13 +46,10 @@
 
 
     @for($i=0; $i<count($compTeams); $i++)
-<<<<<<< HEAD
+
         @unless(empty($compTeams[$i]))
 
-        <h1>Competitive Team{{$i}}</h1>
-=======
         <h1 class="comp">Competitive Team{{$i}}</h1>
->>>>>>> f0fd10bcf1fa9f953aa28d8d793f9e8317fc384f
         @for($j=0; $j<count($compTeams[$i]); $j++)
             <p>{{$compTeams[$i][$j]}}</p>
         @endfor
@@ -61,26 +58,16 @@
     @endfor
 
     @for($i=0; $i<count($socTeams); $i++)
-<<<<<<< HEAD
         @unless(empty($socTeams))
-        <h1>Social Team{{$i}}</h1>
-=======
         <h2 class="soc">Social Team{{$i}}</h2>
->>>>>>> f0fd10bcf1fa9f953aa28d8d793f9e8317fc384f
         @for($j=0; $j<count($socTeams[$i]); $j++)
             <p>{{$socTeams[$i][$j]}}</p>
         @endfor
         <br>
         @endunless
     @endfor
-<<<<<<< HEAD
-    <button type="button" onclick="window.location='{{ action('TeamController@edit') }}'">Edit teams</button>
 
 
+    <div class="btn" onclick="window.location='{{ action('TeamController@edit') }}'">Edit teams</div>
 
-
-=======
-
-    <div class="btn">Button</div>
->>>>>>> f0fd10bcf1fa9f953aa28d8d793f9e8317fc384f
 @stop

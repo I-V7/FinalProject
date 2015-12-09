@@ -53,6 +53,9 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
+
+        DB::table('team')->truncate();
+        DB::table('user_team_xref')->truncate();
         $min = Request::input('min');
         $max = Request::input('max');
         $this->teamMin = $min;
@@ -68,6 +71,7 @@ class TeamController extends Controller
         $numSocTeams = ($numSocUsers + $halfNumIdcUsers)/ $max;
 
         $users = DB::table('users')->get();
+        $userIds = DB::table('users')->select('id')->get();
 
         $numUsers = DB::table('users')->count();
         for($i=0; $i<$numCompTeams;$i++)
@@ -77,6 +81,10 @@ class TeamController extends Controller
         for($i=0; $i<$numSocTeams;$i++)
         {
             DB::table('team')->insert(array('teamName'=>'Social Team '.$i, 'teamType'=>'soc'));
+        }
+        for($i=0; $i<$numUsers; $i++)
+        {
+            DB::table('user_team_xref')->insert(['userID' => strval($userIds[$i]->id), 'teamID'=>strval(0)]);
         }
         $compTeams = array();
         $socTeams = array();
@@ -155,7 +163,6 @@ class TeamController extends Controller
                 $noMoreRoom = true;
             }
         }
-
 
         for($i=0; $i<count($remaining); $i++) {
             if ($remaining[$i]->teamStyle2 == 'comp') {
@@ -288,7 +295,7 @@ class TeamController extends Controller
     public function show(Request $request)
     {
        $name = $request::get('name');
-        dd($name);
+
        $tempTeams = DB::table('user_team_xref')->join('team','team.id', '=', 'user_team_xref.teamID')->join('users','users.id', '=', 'user_team_xref.userID')->select('users.firstName', 'users.lastName','team.teamName')->orderBy('team.teamName', 'asc')->get();
        $teams = array();
        $j = 0;
@@ -328,7 +335,7 @@ class TeamController extends Controller
      */
     public function edit()
     {
-        $tempTeams = DB::table('user_team_xref')->join('team','team.id', '=', 'user_team_xref.teamID')->join('users','users.id', '=', 'user_team_xref.userID')->select('users.id','users.firstName', 'users.lastName','team.teamName')->orderBy('team.teamName', 'asc')->get();
+        $tempTeams = DB::table('user_team_xref')->join('team','team.id', '=', 'user_team_xref.teamID')->join('users','users.id', '=', 'user_team_xref.userID')->select('team.id','users.id','users.firstName', 'users.lastName','team.teamName')->orderBy('team.teamName', 'asc')->get();
         $tempUsers = DB::table('users')->select('id','firstName', 'lastName')->get();
 
         $users = array();
@@ -339,10 +346,14 @@ class TeamController extends Controller
 
         $teams = array();
         $j = 0;
+        $id = 0;
         for($i=0; $i<count($tempTeams); $i++)
         {
             $name = $tempTeams[$i]->teamName;
+            $id = DB::table('team')->where('teamName', '=', $name)->pluck('id');
+
             $teams[$j] = array();
+            array_push($teams[$j],$id);
             array_push($teams[$j],$name);
 
             while($i<count($tempTeams))
@@ -377,6 +388,30 @@ class TeamController extends Controller
         /*******************************************************************************
             this is where you update the teams tables
         ***************************************************************************/
+        $numTeams = DB::table('team')->count();
+        $name = "";
+        $members = [];
+        for($i=0; $i<$numTeams;$i++)
+        {
+            $name = Request::input(strval($i));
+
+            if($name) {
+                DB::table('team')->where('id', '=', strval($i))->update(['teamName' => $name]);
+                $numMembers = DB::table('user_team_xref')->where('teamID', '=', strval($i))->count();
+                if($numMembers > 0) {
+                    for ($j = 1; $j < $numMembers; $j++) {
+                        $id = Request::input('members' . strval($i) . strval($j));
+
+                        if ($id) {
+                            DB::table('user_team_xref')->where('teamID', '=', strval($i))->update(['userID' => $id]);
+                        }
+                    }
+                }
+            }
+        }
+
+        return view('profile');
+
 
     }
 
